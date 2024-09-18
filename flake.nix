@@ -1,12 +1,7 @@
-let
-  hostname = "inferno";
-  user = "haq";
-in
 {
   description = "haquire's config!";
 
   outputs = inputs @ {
-    self,
     home-manager,
     nixpkgs,
     ...
@@ -16,7 +11,7 @@ in
 
     # nixos config
     nixosConfigurations = {
-      "${hostname}" = nixpkgs.lib.nixosSystem {
+      "inferno" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
@@ -24,7 +19,7 @@ in
         modules = [
           ./hosts/haq/haq.nix
           home-manager.nixosModules.home-manager
-          { networking.hostName = "${hostname}"; }
+          { networking.hostName = "inferno"; }
         ];
       };
     };

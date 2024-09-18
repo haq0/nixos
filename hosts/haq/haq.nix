@@ -34,6 +34,9 @@ in {
         ../../home-manager/filemanagers/yazi.nix
         ../../home-manager/terminals/foot.nix
         ../../home-manager/terminals/kitty.nix
+        ../../home-manager/ui/ags.nix
+        ../../home-manager/ui/theme.nix
+        ../../home-manager/ui/hyprland.nix
       ];
     };
   };
