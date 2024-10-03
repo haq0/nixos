@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  hyprland = pkgs.hyprland;
 
   # scripts
   yt = pkgs.writeShellScript "yt" ''

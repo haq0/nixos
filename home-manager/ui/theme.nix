@@ -1,6 +1,6 @@
 { config, pkgs, inputs, ... }: 
 let
-  nerdfonts = pkgs.nerfonts.override {
+  nerdfonts = pkgs.nerdfonts.override {
     fonts = [
       "Ubuntu"
       "UbuntuMono"
@@ -9,10 +9,8 @@ let
     ];
   };
   theme = {
-    theme = {
-      name = "Arc-Dark";
-      package = pkgs.arc-theme;
-    };
+    name = "Arc-Dark";
+    package = pkgs.arc-theme;
   };
   font = {
     name = "Ubuntu Nerd Font";

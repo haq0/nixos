@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, ... }: let
+{ inputs, pkgs, ... }: let
   username = "haq";
 in {
   imports = [
@@ -31,12 +31,15 @@ in {
       imports = [
         ./home.nix
         ../../home-manager/misc/spicetify.nix
+        ../../home-manager/misc/zathura.nix
         ../../home-manager/filemanagers/yazi.nix
         ../../home-manager/terminals/foot.nix
         ../../home-manager/terminals/kitty.nix
         ../../home-manager/ui/ags.nix
         ../../home-manager/ui/theme.nix
         ../../home-manager/ui/hyprland.nix
+
+        inputs.spicetify-nix.homeManagerModules.default
       ];
     };
   };
